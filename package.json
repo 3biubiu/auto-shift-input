@@ -1,14 +1,26 @@
 {
   "name": "auto-shift-input",
   "displayName": "auto-shift-input",
-  "description": "",
+  "publisher": "biubiu_up",
+  "description": "一个能够根据代码上下文自动切换中英文输入法的小工具",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.82.0"
   },
+  "keywords": [
+    "Chinese input method",
+    "annotation",
+    "Chinese"
+  ],
   "categories": [
     "Other"
   ],
+  "repository": {
+    "url": "https://github.com/3biubiu/auto-shift-input"
+  },
+  "bugs": {
+    "url": "https://github.com/3biubiu/auto-shift-input/issues"
+  },
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
