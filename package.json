@@ -9,7 +9,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -17,7 +19,33 @@
         "command": "auto-shift-input.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Auto Shift Input",
+      "properties": {
+        "Settings.ChineseModeCode": {
+          "type": "number",
+          "default": 1025,
+          "description": "Set Chinese mode code. You can get the code by executing 'shiftIm.getImCode' when in Chinese mode. Default 1025"
+        },
+        "Settings.EnglishModeCode": {
+          "type": "number",
+          "default": 0,
+          "description": "Set English mode code. You can get the code by executing 'shiftIm.getImCode' when in English mode. Default 0"
+        },
+        "Settings.GetParam": {
+          "type": "number",
+          "default": 1,
+          "description": "wParam: IMC_GETCONVERSIONMODE. Default 0x001 (1)"
+        },
+        "Settings.SetParam": {
+          "type": "number",
+          "default": 2,
+          "description": "wParam: IMC_SETCONVERSIONMODE. Default 0x002 (2)"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",

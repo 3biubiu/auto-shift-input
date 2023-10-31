@@ -16,7 +16,8 @@ const hscopes = vscode.extensions.getExtension('yfzhao.hscopes-booster');
  */
 export function getScope(document: any, position: any) {
     if (!hscopes || !document || !position) {
-        console.log(`function "getScope" causes error.`)
+        console.log(`function "getScope" causes error. You may need to install plugin: "HyperScopes Booster"`)
+        vscode.window.showInformationMessage(`function "getScope" causes error. You may need to install plugin: "HyperScopes Booster"`);
         return undefined
     }
     else {
