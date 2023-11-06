@@ -3,7 +3,7 @@
 'use strict';
 
 const path = require('path');
-
+const CopyPlugin = require("copy-webpack-plugin");
 //@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
@@ -24,6 +24,14 @@ const extensionConfig = {
     // modules added here also need to be added in the .vscodeignore file
     'ffi-napi': 'ffi-napi'
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'node_modules/koffi/build/**', to: "./" },
+        // { from: "other", to: "public" },
+      ],
+    }),
+  ],
   // plugins: [new webpack.ExternalsPlugin("commonjs", ["ffi-napi"])],
   resolve: {
     // support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader

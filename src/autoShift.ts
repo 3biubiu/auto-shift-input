@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { getScope } from './hscopes';
-import { switchInput } from './switch';
+import { switchInput } from './switch-koffi';
+// import { switchInput } from './switch';
 // import * as ffi from 'ffi-napi'
 
 let cnLParam = vscode.workspace.getConfiguration().get("Settings.ChineseModeCode") ?? 1025
@@ -21,13 +22,13 @@ async function toggleCondition(document: any, position: any) {
     // let res = await vscode.commands.executeCommand('editor.action.inspectEditorTokens');
     let scope = getScope(document, position)
     if (!scope) return;
-    console.log('--------------------------');
-    console.log(scope.join('\n'));
-    console.log('--------------------------');
+    // console.log('--------------------------');
+    // console.log(scope.join('\n'));
+    // console.log('--------------------------');
     console.log(scope.toString().includes('comment'));
     currentComment = scope.toString().includes('comment')
     if (currentComment === previousInMath) return;
-    switchInput(setWParam, currentComment ? enLParam : cnLParam)
+    switchInput(setWParam, currentComment ? cnLParam : enLParam)
     previousInMath = currentComment;
 
 }

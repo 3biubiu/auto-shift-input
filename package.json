@@ -21,7 +21,9 @@
   "bugs": {
     "url": "https://github.com/3biubiu/auto-shift-input/issues"
   },
-  "activationEvents": ["onStartupFinished"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -59,9 +61,9 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile": "vite build",
+    "watch": "vite build --watch",
+    "package": "vite build --mode production",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
@@ -75,15 +77,19 @@
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
     "@vscode/test-electron": "^2.3.4",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.47.0",
     "glob": "^10.3.3",
     "mocha": "^10.2.0",
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
+    "vite": "^4.5.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "ffi-napi": "^4.0.3"
+    "ffi-napi": "^4.0.3",
+    "koffi": "^2.6.6",
+    "styled-components": "5.3.10"
   }
 }

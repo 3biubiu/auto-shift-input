@@ -1,5 +1,7 @@
 // 实现一个英文切换中文的效果
-const ffi = require('ffi-napi');
+// const ffi = require('ffi-napi');
+// const ffi = require('@lwahonen/ffi-napi')
+const ffi = require('@breush/ffi-napi');
 
 const user32 = new ffi.Library("user32", {
     "SendMessageW": ['int32', ['long', 'int32', 'int32', 'int32']],
