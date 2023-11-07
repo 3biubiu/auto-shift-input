@@ -3,10 +3,10 @@
   "displayName": "auto-shift-input",
   "publisher": "BIUBIUBIUUP",
   "description": "一个能够根据代码上下文自动切换中英文输入法的小工具",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "icon/icon.png",
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.82.0"
   },
   "keywords": [
     "Chinese input method",
