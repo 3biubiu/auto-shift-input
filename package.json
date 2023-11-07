@@ -4,13 +4,15 @@
   "publisher": "biubiu_up",
   "description": "一个能够根据代码上下文自动切换中英文输入法的小工具",
   "version": "0.0.1",
+  "icon": "icon/icon.png",
   "engines": {
     "vscode": "^1.82.0"
   },
   "keywords": [
     "Chinese input method",
     "annotation",
-    "Chinese"
+    "Chinese",
+    "自动切换"
   ],
   "categories": [
     "Other"
@@ -26,12 +28,6 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "auto-shift-input.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "configuration": {
       "type": "object",
       "title": "Auto Shift Input",
@@ -88,7 +84,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "ffi-napi": "^4.0.3",
     "koffi": "^2.6.6",
     "styled-components": "5.3.10"
   }

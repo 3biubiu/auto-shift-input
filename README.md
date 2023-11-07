@@ -1,71 +1,49 @@
-# auto-shift-input README
+# auto-shift-input 
 
-This is the README for your extension "auto-shift-input". After writing up a brief description, we recommend including the following sections.
+一个vscode插件,能够实现根据光标位置自动切换中英文输入
+
+![1699359679680](https://s2.loli.net/2023/11/07/K1zU9XjZ7LYBgck.gif)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+获取 vscode 的 TextMate 分词引擎的词法作用域判断当前光标是否处于注释语句中,从而达到自动切换中英文输入的目的. ,目前支持win平台,默认兼容微软输入法,其他输入法如果不起作用请尝试修改 `SetParam` 字段为 `6`.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> 同时  YF-Zhao 大佬的文章对本插件开发有着非常大的助力,插件的核心功能基于大佬的方案改进而来
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+ 此插件运行依赖 `HyperScopes Booster` 插件:
+
+[HyperScopes Booster]: https://marketplace.visualstudio.com/items?itemName=yfzhao.hscopes-booster
+
+请务必安装
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```json
+"Settings.ChineseModeCode": {
+  "type": "number",
+  "default": 1025,
+  "description": "如果想实现其他的语言的自动切换 请修改此值,默认为中文(1025)"
+},
+"Settings.EnglishModeCode": {
+  "type": "number",
+  "default": 0,
+  "description": "如果想实现其他的语言的自动切换 请修改此值, 默认为英文(0)"
+},
+"Settings.GetParam": {
+  "type": "number",
+  "default": 1,
+  "description": "检测输入法状态,默认为微软输入法(0x001)"
+},
+"Settings.SetParam": {
+  "type": "number",
+  "default": 2,
+  "description": "切换输入法状态,默认为微软输入法(2),QQ/搜狗等(6)"
+}
+```
 
-For example:
+## Plan
 
-This extension contributes the following settings:
+- 尝试兼容Linux
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
