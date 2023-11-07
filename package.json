@@ -54,7 +54,7 @@
         "Settings.SetParam": {
           "type": "number",
           "default": 2,
-          "description": "wParam: IMC_SETCONVERSIONMODE. Default 0x002 (2)"
+          "description": "wParam: IMC_SETCONVERSIONMODE. Default 0x002 (2) Other 0x006 (6)"
         }
       }
     }
