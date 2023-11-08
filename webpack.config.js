@@ -11,7 +11,9 @@ const CopyPlugin = require("copy-webpack-plugin");
 const extensionConfig = {
   target: 'node', // VS Code extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/node/
 	mode: 'none', // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
-
+  node: {
+    __dirname: false,
+  },
   entry: './src/extension.ts', // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-context/
   output: {
     // the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
@@ -25,12 +27,12 @@ const extensionConfig = {
     'ffi-napi': 'ffi-napi'
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: 'node_modules/koffi/build/**', to: "./" },
-        // { from: "other", to: "public" },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: 'node_modules/koffi/build/koffi', to: "koffi" },
+    //     // { from: "other", to: "public" },
+    //   ],
+    // }),
   ],
   // plugins: [new webpack.ExternalsPlugin("commonjs", ["ffi-napi"])],
   resolve: {
@@ -47,7 +49,11 @@ const extensionConfig = {
             loader: 'ts-loader'
           }
         ]
-      }
+      },
+      {
+        test: /\.node$/,
+        loader: 'node-loader',
+      },
     ]
   },
   devtool: 'nosources-source-map',
