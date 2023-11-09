@@ -58,6 +58,7 @@
   "extensionDependencies": [
     "yfzhao.hscopes-booster"
   ],
+  "extensionKind": ["ui"],
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
