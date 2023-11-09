@@ -3,7 +3,7 @@
   "displayName": "auto-shift-input",
   "publisher": "BIUBIUBIUUP",
   "description": "一个能够根据代码上下文自动切换中英文输入法的小工具",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "icon": "icon/icon.png",
   "engines": {
     "vscode": "^1.74.0"
