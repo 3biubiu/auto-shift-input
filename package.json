@@ -51,6 +51,11 @@
           "type": "number",
           "default": 2,
           "description": "wParam: IMC_SETCONVERSIONMODE. Default 0x002 (2) Other 0x006 (6)"
+        },
+        "Settings.CursorColor": {
+          "type": "string",
+          "default": "",
+          "description": "Cursor color in Chinese mode. Default(undefined).you can write like: #00c4da"
         }
       }
     }

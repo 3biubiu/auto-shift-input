@@ -40,7 +40,12 @@
   "type": "number",
   "default": 2,
   "description": "切换输入法状态,默认为微软输入法(2),QQ/搜狗等(6)"
-}
+},
+"Settings.CursorColor": {
+    "type": "string",
+    "default": "",
+    "description": "中文模式下的光标颜色 默认不设置"
+  }
 ```
 
 ## Plan
