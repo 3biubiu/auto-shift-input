@@ -3,7 +3,7 @@
   "displayName": "auto-shift-input",
   "publisher": "BIUBIUBIUUP",
   "description": "一个能够根据代码上下文自动切换中英文输入法的小工具",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "icon": "icon/icon.png",
   "engines": {
     "vscode": "^1.74.0"
@@ -58,7 +58,9 @@
   "extensionDependencies": [
     "yfzhao.hscopes-booster"
   ],
-  "extensionKind": ["ui"],
+  "extensionKind": [
+    "ui"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
