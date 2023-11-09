@@ -1,7 +1,7 @@
 // 实现一个英文切换中文的效果
 // const ffi = require('ffi-napi');
 // import koffi from 'koffi';
-const koffi = require('koffi/indirect');
+const koffi = require('koffi');
 const user32 = koffi.load('user32.dll')
 const imm32 = koffi.load('imm32.dll')
 

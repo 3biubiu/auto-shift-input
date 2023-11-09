@@ -55,6 +55,9 @@
       }
     }
   },
+  "extensionDependencies": [
+    "yfzhao.hscopes-booster"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
@@ -85,7 +88,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "koffi": "^2.6.6",
-    "styled-components": "5.3.10"
+    "koffi": "^2.6.6"
   }
 }

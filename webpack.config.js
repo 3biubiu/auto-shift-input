@@ -28,10 +28,9 @@ const extensionConfig = {
   },
   plugins: [
     // new CopyPlugin({
-    //   patterns: [
-    //     { from: 'node_modules/koffi/build/koffi', to: "koffi" },
-    //     // { from: "other", to: "public" },
-    //   ],
+    //   // patterns: [
+    //   //   { from: 'node_modules/koffi/build/koffi', to: "koffi" },
+    //   // ],
     // }),
   ],
   // plugins: [new webpack.ExternalsPlugin("commonjs", ["ffi-napi"])],
