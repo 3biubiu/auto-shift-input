@@ -2,7 +2,7 @@
 
 一个vscode插件,能够实现根据光标位置自动切换中英文输入
 
-![1699359679680](https://s2.loli.net/2023/11/07/K1zU9XjZ7LYBgck.gif)
+![Video_20231109_092940_467.gif](https://s2.loli.net/2023/11/09/IQAxUqhCFEdDHjN.gif)
 
 ## Features
 
