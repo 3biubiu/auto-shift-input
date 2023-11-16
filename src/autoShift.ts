@@ -21,15 +21,16 @@ async function toggleCondition(document: any, position: any) {
     let scope = getScope(document, position)
     if (!scope) return;
 
-    console.log('comment',scope.toString().includes('comment'));
+    console.log('comment', scope.toString().includes('comment'));
     currentComment = scope.toString().includes('comment')
     const configuration = vscode.workspace.getConfiguration('workbench');
+    let backConfig: any = configuration.get('colorCustomizations')
 
     if (currentComment) {
-        configuration.update('colorCustomizations', { "editorCursor.foreground": cursorColor || undefined }, true);
+        configuration.update('colorCustomizations', { ...backConfig, "editorCursor.foreground": cursorColor || undefined }, true);
         // configuration.update('colorCustomizations', { "editorCursor.background": "#00c4da" }, true);
     } else {
-        configuration.update('colorCustomizations', { "editorCursor.foreground": undefined }, true);
+        configuration.update('colorCustomizations', { ...backConfig, "editorCursor.foreground": undefined }, true);
         // configuration.update('colorCustomizations', { "editorCursor.background": undefined }, true);
 
     }
