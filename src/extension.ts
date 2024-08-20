@@ -5,7 +5,7 @@ import { autoShift } from './autoShift';
 export function activate(context: vscode.ExtensionContext) {
 
 	console.log('插件激活');
-	autoShift(context)
+	autoShift(context);
 
 }
 
